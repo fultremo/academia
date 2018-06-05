@@ -1,7 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: fulgen
- * Date: 14/04/18
- * Time: 19:56
- */
+@extends('admin.layouts.layout')
+@section('content')
+    <h1>Dashboard</h1>
+    <p>Usuario autenticado: {{ ucfirst(auth()->user()->nickname) }}</p>
+    <p>Correo electrónico: {{ auth()->user()->email }}</p>
+
+@endsection

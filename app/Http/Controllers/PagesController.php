@@ -22,9 +22,4 @@ class PagesController extends Controller
     {
         return view('pages.courses');
     }
-
-    public function contact()
-    {
-        return view('pages.contact');
-    }
 }

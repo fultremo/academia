@@ -39,6 +39,8 @@
 
 @yield('courses')
 
+@yield('contact')
+
 @yield('content')
 
 <!-- Call To Action -->
@@ -164,7 +166,7 @@
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h2 class="white-text">Contact Us</h2>
                 <p class="lead white-text">Libris vivendo eloquentiam ex ius, nec id splendide abhorreant.</p>
-                <a class="main-button icon-button" href="{{ route('pages.contact') }}">Contact Us Now</a>
+                <a class="main-button icon-button" href="{{ route('contacts.index') }}">Contact Us Now</a>
             </div>
 
         </div>

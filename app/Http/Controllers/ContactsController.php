@@ -10,8 +10,9 @@ namespace App\Http\Controllers;
 
 
 use App\Contact;
+use App\Http\Requests\StorePostRequest;
 
-class ContactController
+class ContactsController extends Controller
 {
     public function index()
     {
@@ -24,19 +25,12 @@ class ContactController
         return view('contacts.create');
     }
 
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        $this->validate($request, [
-            'first_name' => 'required',
-            'email' => 'required',
-            'subject' => 'required',
-            'message' => 'required'
-        ]);
-
         $contact = new Contact;
         $contact->first_name = $request->first_name;
         $contact->last_name = $request->last_name;
-        $contact->email = $request->last_name;
+        $contact->email = $request->email;
         $contact->subject = $request->subject;
         $contact->message = $request->message;
 
@@ -57,16 +51,8 @@ class ContactController
         return view('contacts.edit', compact('contact'));
     }
 
-    public function update(Request $request, $id)
+    public function update(StorePostRequest $request, $id)
     {
-        $this->validate($request, [
-            'first_name'  => 'required',
-            'last_name'  => 'required',
-            'email'   => 'required',
-            'subject'   =>  'required',
-            'message'   =>  'required'
-        ]);
-
         $contact = Contact::find($id);
         $contact->first_name = $request->first_name;
         $contact->last_name = $request->last_name;

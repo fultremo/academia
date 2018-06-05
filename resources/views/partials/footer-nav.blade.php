@@ -4,8 +4,8 @@
         <li><a href="{{ route('pages.home') }}">Home</a></li>
         <li><a href="{{ route('pages.about') }}">About</a></li>
         <li><a href="{{ route('pages.courses') }}">Courses</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="{{ route('pages.contact') }}">Contact</a></li>
+        <li><a href="{{ route('blog') }}">Blog</a></li>
+        <li><a href="{{ route('contacts.index') }}">Contact</a></li>
     </ul>
 </div>
 <!-- /footer nav -->

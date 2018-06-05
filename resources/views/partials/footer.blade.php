@@ -28,7 +28,7 @@
             <!-- social -->
             <div class="col-md-4 col-md-push-8">
                 <ul class="footer-social">
-                    <li><a href="https://www.facebook.com/sharer.php?u={{ request()->fullUrl() }}&title="
+                    <li><a href="https://www.facebook.com/sharer.php?url={{ request()->fullUrl() }}&title="
                            class="facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://twitter.com/intent/tweet?url={{ request()->fullUrl() }}&text=&via=fultremo&hashtags=BlogAcademiaEdusite"
                            class="twitter"><i class="fa fa-twitter"></i></a></li>
